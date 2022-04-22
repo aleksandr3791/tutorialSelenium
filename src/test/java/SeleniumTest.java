@@ -46,11 +46,9 @@ public class SeleniumTest {
 
     }
 
-
-
     @Test
     public void getDriverTest() {
-        WebDriver driver = getDriver("jfdv");
+        WebDriver driver = getDriver("chrome");
         driver.get("https://www.google.com/");
 
     }
