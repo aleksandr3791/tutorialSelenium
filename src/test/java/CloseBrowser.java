@@ -13,7 +13,7 @@ public class CloseBrowser {
 
         //sa dwie opcje: quit i close
 
-       // driver.quit();
+       // driver.quit();    //zamyka mocno
         driver.close();
     }
 }
