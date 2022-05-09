@@ -37,10 +37,12 @@ public class SearchingPhrase {
         searchField.sendKeys("Selenium");
         //zasymuluj nacisniecie przycisku ENter
         searchField.sendKeys(Keys.ENTER);
-        //znajdz rezultat
-        WebElement result = driver.findElement(By.xpath("//a[contains(@href, 'selenium.dev)]//span'"));
+        //znajdz rezultat - nie dziala ¯\_(ツ)_/¯
+       WebElement result = driver.findElement(By.xpath("//a[contains(@href, 'selenium.dev')]//span"));
 
-        Assert.assertTrue(result.isDisplayed());
+
+      //  Assert.assertFalse(result.isDisplayed());  // test nie przejdzie
+        Assert.assertTrue(result.isDisplayed());   // test przejdzie
 
 
 
