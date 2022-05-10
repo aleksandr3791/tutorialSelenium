@@ -1,0 +1,8 @@
+W Narzędzaich dev w zakładce COnsole wyszukujemy selektor
+
+$$("#clickOnMe")
+$$(".topSecret")
+$$("input")
+$$("[name = 'fname']")
+$$("[class = 'topSecret']")
+$$("*")    znajduje wszytskie tagi na stronie
