@@ -19,7 +19,7 @@ public class FindByTag {
 
         By inputLocator = By.tagName("input");
         WebElement input = driver.findElement(inputLocator);   //zwraca pierwszy element na stronie
-        input.sendKeys("Pierwszy");
+        input.sendKeys("Wojtuś");
 
         List<WebElement> inputs = driver.findElements(inputLocator);   //zwraca wszystke inputy na stronie
         System.out.println(inputs.size());

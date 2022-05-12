@@ -1,8 +1,30 @@
 W Narzędzaich dev w zakładce COnsole wyszukujemy selektor
 
-$$("#clickOnMe")
-$$(".topSecret")
-$$("input")
+$$("#clickOnMe")            znajduje elementy z id clickOnMe
+$$(".topSecret")            znajduje elementy z klasa topSecret
+$$("input")                 znajduje inputy
 $$("[name = 'fname']")
 $$("[class = 'topSecret']")
-$$("*")    znajduje wszytskie tagi na stronie
+
+$$("*")                     znajduje wszytskie tagi na stronie
+$$("div ul")                znajduje listy na stronie, równiez te zagnieżdżone
+$$("table tr")              znajduje wiesze w tabeli
+$$("tbody tr")              coś podobnego do ostatniego, ale nie rozumiem różnicy
+$$("div > ul")              pierwszy ul w divie - dziecko diva
+$$("div > tr")              na stronce testowej nie zadziała, bo po table jest jeszcze tbody, a nie tr - dziecko
+$$("tbody > tr")            dziecko
+$$("label + form")          pierwszy tag form po  tagu label - to nie dziecko, sa rownozedne
+$$("label ~ form")          wszystkie tagi form po tagu label (tylda)
+
+$$("input[name = 'fname']")     inputy, ktorych atrybut name = fname; dla innych atrybutów np id, href stosujemy tak samo
+$$("[name*='ame']")             znajduje elementy, których atrybut name zawiera w sobie dany ciąg znaków (tutaj 'ame'); dla innych atrybutów np id, href stosujemy tak samo
+$$("input[name*='ame']")        znajduje inputy, których atrybut name zawiera w sobie dany ciąg znaków (tutaj 'ame'); dla innych atrybutów np id, href stosujemy tak samo
+$$("[name^='user']")            znajduje elementy, których atrybut name zaczyna się od danej frazy (tutaj 'user'); dla innych atrybutów np id, href stosujemy tak samo
+$$("[name$='me']")              znajduje elementy, których atrybut name kończy się daną frazą (tutaj 'user'); dla innych atrybutów np id, href stosujemy tak samo
+
+$$("li:first-child")            pierwsze dziecko z tagu nadrzednego
+$$("li:last-child")             ostatnie dziecko z tagu nadrzednego
+$$("li:nth-child(2)")           ktores dziecko z tagu nadrzednego - numerujemy od 1
+
+
+
