@@ -1,0 +1,31 @@
+$x("/html/body/button")
+$x("/html/body/p")
+$x("/html/body/button[1]")
+$x("//*")                     wszystkie tagi na stronie
+
+$x("//tr")          szukamy w całej strukturze a nie tylko schodkowo po elementach -> // podwojny /
+$x("/html/body/table//tr")
+
+/html/body/button[@id='clickOnMe']      button z danym ID
+//button[@id='clickOnMe']               button na calej stronie z danym id
+
+
+//input[@name = 'fname']                input z name 'fname'
+
+//p[@class = 'topSecret']               paragraf z dana klasa
+
+/a[text()= 'Visit W3Schools.com!']      link z danym tekstem
+//a[contains(text(),'Visit')]           link z częścią danego tekstu
+
+$x("(//input)[2]")                      drugi input na stronie
+$x("(//input)[last()]")                 ostatni input na stronie
+
+$x("//*[@name = 'fname']")              dowolny element an stronie z name = fname
+$x("//*[@name]")                        dowolny element na stronie, kóry posiada atrybut name
+$x("//*[@id]")                          dowolny element na stronie, kóry posiada atrybut id
+$x("//button[@id]")                     buttony, które posiadaja atrybut id
+$x("(//button[@id])[1]")                drugi button na stronie, który zawiera atrybut id
+
+
+
+
