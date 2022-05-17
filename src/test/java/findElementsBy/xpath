@@ -26,6 +26,9 @@ $x("//*[@id]")                          dowolny element na stronie, kóry posiad
 $x("//button[@id]")                     buttony, które posiadaja atrybut id
 $x("(//button[@id])[1]")                drugi button na stronie, który zawiera atrybut id
 
-
-
-
+$x("//button[@id!='clickOnMe']")        buttony, których wartość id nie jest 'clickOnMe'
+$x("//*[@id!='clickOnMe']")             wszystkie elementy, ktorych id nie jest 'clickOnMe'
+$x("//*[contains(@name, 'ame')]")       wszystkie elementy, ktorych atrybut name zawiera text 'ame'
+$x("//*[starts-with(@name, 'f')]")      wszytskie lelemnty, ktorych atrybut name zaczyna się od 'f'
+$x("//*[ends-with(@name, 'e')]")        ta metoda może nie dzialac
+$x("//*[substring(@name,string-length(@name)-string-length('ame')+1)]")     konczy się na 'ame'

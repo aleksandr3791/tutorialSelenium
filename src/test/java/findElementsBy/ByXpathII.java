@@ -8,10 +8,11 @@ import org.testng.annotations.Test;
 public class ByXpathII {
 
     @Test
-    public void findElement (){
+    public void findElement() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
 
 
+    }
 }
