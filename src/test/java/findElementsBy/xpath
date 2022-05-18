@@ -32,3 +32,41 @@ $x("//*[contains(@name, 'ame')]")       wszystkie elementy, ktorych atrybut name
 $x("//*[starts-with(@name, 'f')]")      wszytskie lelemnty, ktorych atrybut name zaczyna się od 'f'
 $x("//*[ends-with(@name, 'e')]")        ta metoda może nie dzialac
 $x("//*[substring(@name,string-length(@name)-string-length('ame')+1)]")     konczy się na 'ame'
+
+
+RODZINA W XPATH
+
+$x("//div/child::ul")                   szukanie ul, które jest dzieckiem diva
+$x("//div//ul")                         wszystkie tagi ul w div
+$x("//div/descendant::ul")             szukamy wszystkich zstepnych - dzieci typu ul, ale tez 'wnuków'  typu ul
+$x("//div/descendant::*")              szukamy wszystkich zstepnych
+$x("//div/ancestor::*")                szukamy tagów wstępnych - nad tagiem div "rodziców i dziadków"
+$x("//div/ancestor::body")
+$x("//div/..")                         szuka bezpośredniego rodzica
+$x("//div/../..")                      szuka dziadka
+
+$x("//img/following::*")                wszystki tagi po obrazku - nie tylko rodzeństwo, ale też elementy zagnieżdżone (dzieci rodzeństwa)
+$x("//img/following-sibling::*")        tagi, które znajdują sie w strukturze na tym samym poziomie po obrazku - rodzeństwo
+$x("//img/preceding::*")                wszytskie tagi przed obrazkiem
+$x("//img/preceding-sibling::*")        tagi, które znajdują sie w strukturze na tym samym poziomie przed obeazkiem
+
+
+OPERATORY W XPATH
+
+$x("//a | // input")                                szuka linków oraz inputów
+$x("//a | // input")
+$x("//input[@name = 'fname' and @id = 'fname']")        szuka inputu, ktorego wartość atrybutu name - fname i wartość id = fname
+$x("//input[@name = 'fname' or @id = 'fname']")         szuka inputu, ktorego wartość atrybutu name - fname lub wartość id = fname
+
+
+
+
+NOTES:
+- trzeba sprawdzać czy ID nie jest automatycznie generowane przy każdym refreshu strony
+- xpath jest najwolniejszy - więc jeśli się da inaczej to lepiej inaczej
+- tylko xpath potrafi sie odwolać do elementu wyżej, czyli do rodzica
+- tylko xpath potrafi sie odwolać do tagu, który posiada jakiś text
+
+
+
+
